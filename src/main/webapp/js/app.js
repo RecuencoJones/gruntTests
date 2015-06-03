@@ -1,10 +1,20 @@
-angular.module('gruntTests', [])
+angular.module('gruntTests', ['ui.router'])
 
-    .controller('MainCtrl', ['$scope', function($scope){
+    .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+        
+        $stateProvider
 
-            $scope.input = null;
+            .state('home', {
+                url: '/home',
+                templateUrl: "templates/main/home.html",
+                controller: "MainCtrl"
+            })
 
-            $scope.submit = function(){
-            console.log($scope.input);
-        };
+            .state('stats', {
+                url: '/stats',
+                templateUrl: "templates/main/stats.html",
+                controller: "StatsCtrl"
+            });
+
+        $urlRouterProvider.otherwise('home');
     }]);

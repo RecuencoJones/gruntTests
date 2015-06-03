@@ -1,4 +1,7 @@
 *~
 node_modules
 build
+dist
+extra
+bower_components
 *.log
