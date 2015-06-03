@@ -4,6 +4,12 @@ My way to learning grunt task automation
 
 This project contains a simple AngularJS application which is the target of concatenation and minification amongst others.
 
+# Fast way
+
+Just run `npm start`
+
+This runs `npm install && grunt run`
+
 # Installing
 
 Just run `npm install`
